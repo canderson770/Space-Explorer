@@ -54,7 +54,6 @@
      <Compile Include="Assets\SpawnControl.cs" />
      <Compile Include="Assets\StartGameButton.cs" />
      <Compile Include="Assets\StaticVars.cs" />
-     <Compile Include="Assets\box.cs" />
      <Compile Include="Assets\playerHealth.cs" />
      <Compile Include="Assets\playerMovement.cs" />
  <Reference Include="UnityEngine.UI">

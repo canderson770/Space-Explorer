@@ -6,7 +6,6 @@ public class ScoreControl : MonoBehaviour
 {
 	public float scoreTime;
 	public Text scoreText;
-	public int score = 0;
 
 
 	public void StartScore()
@@ -16,13 +15,12 @@ public class ScoreControl : MonoBehaviour
 	
 	IEnumerator Score()
 	{
-		print ("waiting");
 		do 
 		{
 			yield return new WaitForSeconds (scoreTime);
 
-			score += 1;
-			scoreText.text = score.ToString().PadLeft(6, '0');
+			StaticVars.score += 1;
+			scoreText.text = StaticVars.score.ToString().PadLeft(6, '0');
 
 		} while (StaticVars.playerhealth > 0);
 	}

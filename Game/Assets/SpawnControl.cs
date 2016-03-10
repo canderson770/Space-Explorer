@@ -7,7 +7,7 @@ public class SpawnControl : MonoBehaviour
 	public List<GameObject> baddies;
 	public List<Transform> spawnPoints;
 
-	public int seconds;
+	public float seconds;
 
 	void Start()
 	{
@@ -23,18 +23,13 @@ public class SpawnControl : MonoBehaviour
 	public void StartSpawn()
 	{
 			StartCoroutine (Spawn ());
-			print ("started coroutine");
-		
 	}
 
 	IEnumerator Spawn()
 	{
-		print ("waiting");
-		do {
+		while (StaticVars.playerhealth > 0)
+		{
 			yield return new WaitForSeconds (seconds);
-			int n = 1;
-			print (n++);
-
 			int random = Random.Range (0, baddies.Count - 1);
 			baddies [random].SetActive (true);
 
@@ -45,9 +40,14 @@ public class SpawnControl : MonoBehaviour
 			{
 				baddies.RemoveAt (random);
 			}
-		} while (baddies.Count > 0);
+		}
 	}
 
+	void Update()
+	{
+		if (StaticVars.playerhealth <= 0)
+			StopAllCoroutines ();
+	}
 
 	void AddToSpawnPointsList(Transform _spawnPoint)
 	{
