@@ -46,10 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AddBaddies.cs" />
+     <Compile Include="Assets\HealthBar.cs" />
+     <Compile Include="Assets\ScoreControl.cs" />
      <Compile Include="Assets\SetAsBaddie.cs" />
      <Compile Include="Assets\SetAsSpawnPoint.cs" />
-     <Compile Include="Assets\dodger\SpawnControl.cs" />
-     <Compile Include="Assets\dodger\playerMovement.cs" />
+     <Compile Include="Assets\SpawnControl.cs" />
+     <Compile Include="Assets\StartGameButton.cs" />
+     <Compile Include="Assets\StaticVars.cs" />
+     <Compile Include="Assets\box.cs" />
+     <Compile Include="Assets\playerHealth.cs" />
+     <Compile Include="Assets\playerMovement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

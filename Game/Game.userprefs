@@ -1,13 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\dodger\SpawnControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpawnControl.cs">
     <Files>
-      <File FileName="Assets\dodger\SpawnControl.cs" Line="18" Column="5" />
-      <File FileName="Assets\SetAsBaddie.cs" Line="7" Column="2" />
+      <File FileName="Assets\ScoreControl.cs" Line="6" Column="2" />
+      <File FileName="Assets\SetAsBaddie.cs" Line="1" Column="1" />
       <File FileName="Assets\SetAsSpawnPoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\dodger\StaticVars.cs" Line="7" Column="21" />
-      <File FileName="Assets\StartGameButton.cs" Line="8" Column="37" />
-      <File FileName="Assets\AddBaddies.cs" Line="11" Column="21" />
+      <File FileName="Assets\StartGameButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\AddBaddies.cs" Line="1" Column="1" />
+      <File FileName="Assets\SpawnControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\StaticVars.cs" Line="1" Column="1" />
+      <File FileName="Assets\HealthBar.cs" Line="17" Column="1" />
+      <File FileName="Assets\playerHealth.cs" Line="7" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
