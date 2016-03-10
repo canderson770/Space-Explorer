@@ -15,32 +15,37 @@ public class SpawnControl : MonoBehaviour
 		baddies = new List<GameObject> ();
 
 		SetAsSpawnPoint.PassSpawnPointTransform += AddToSpawnPointsList;
-		SetAsBaddie.PassBaddieGameObject += AddToBaddiesList;
+		//SetAsBaddie.PassBaddieGameObject += AddToBaddiesList;
+		AddBaddies.AddBaddiesBack += AddToBaddiesList;
 
-		StartSpawn ();
 	}
 
-	void StartSpawn()
+	public void StartSpawn()
 	{
-		print ("starting");
-		while (baddies.Count >= 0) 
-		{
 			StartCoroutine (Spawn ());
 			print ("started coroutine");
-		}
+		
 	}
 
 	IEnumerator Spawn()
 	{
 		print ("waiting");
-		yield return new WaitForSeconds (seconds);
-		print ("go");
+		do {
+			yield return new WaitForSeconds (seconds);
+			int n = 1;
+			print (n++);
 
-		int random = Random.Range (0, baddies.Count - 1);
-		baddies [random].SetActive (true);
+			int random = Random.Range (0, baddies.Count - 1);
+			baddies [random].SetActive (true);
 
-		int randomSpawnPointNum = Random.Range (0, spawnPoints.Count-1);
-		baddies [random].transform.position = spawnPoints[randomSpawnPointNum].position;
+			int randomSpawnPointNum = Random.Range (0, spawnPoints.Count - 1);
+			baddies [random].transform.position = spawnPoints [randomSpawnPointNum].position;
+
+			if (baddies.Count > 0)
+			{
+				baddies.RemoveAt (random);
+			}
+		} while (baddies.Count > 0);
 	}
 
 
