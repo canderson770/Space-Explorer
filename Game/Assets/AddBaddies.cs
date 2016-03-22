@@ -6,9 +6,12 @@ public class AddBaddies : MonoBehaviour
 {
 	public static Action<GameObject> AddBaddiesBack;
 
-	void OnTriggerEnter () 
+	void OnTriggerEnter2D(Collider2D hit) 
 	{
-		if (AddBaddiesBack != null)
-			AddBaddiesBack (this.gameObject);
+		if (hit.gameObject.name == "bottomBorder")
+		{
+			if (AddBaddiesBack != null)
+				AddBaddiesBack (this.gameObject);
+		}
 	}
 }

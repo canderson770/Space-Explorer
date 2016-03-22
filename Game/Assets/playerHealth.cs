@@ -11,7 +11,7 @@ public class playerHealth : MonoBehaviour
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 	}
 
-	void OnCollisionEnter()
+	void OnCollisionEnter2D()
 	{
 		print ("hit");
 		if (StaticVars.playerhealth > 0) 
@@ -21,6 +21,9 @@ public class playerHealth : MonoBehaviour
 		if (StaticVars.playerhealth <= 0) 
 		{
 			spriteRenderer.enabled = false;
+			StaticVars.paused = true;
 		}
 	}
+
+
 }

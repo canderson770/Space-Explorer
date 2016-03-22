@@ -47,12 +47,14 @@
   <ItemGroup>
      <Compile Include="Assets\AddBaddies.cs" />
      <Compile Include="Assets\HealthBar.cs" />
+     <Compile Include="Assets\HitPlayer.cs" />
      <Compile Include="Assets\ScoreControl.cs" />
      <Compile Include="Assets\SetAsBaddie.cs" />
      <Compile Include="Assets\SetAsSpawnPoint.cs" />
      <Compile Include="Assets\SpawnControl.cs" />
      <Compile Include="Assets\StartGameButton.cs" />
      <Compile Include="Assets\StaticVars.cs" />
+     <Compile Include="Assets\TimeControl.cs" />
      <Compile Include="Assets\playerHealth.cs" />
      <Compile Include="Assets\playerMovement.cs" />
  <Reference Include="UnityEngine.UI">

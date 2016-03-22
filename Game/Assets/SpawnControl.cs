@@ -30,14 +30,15 @@ public class SpawnControl : MonoBehaviour
 		while (StaticVars.playerhealth > 0)
 		{
 			yield return new WaitForSeconds (seconds);
-			int random = Random.Range (0, baddies.Count - 1);
-			baddies [random].SetActive (true);
-
-			int randomSpawnPointNum = Random.Range (0, spawnPoints.Count - 1);
-			baddies [random].transform.position = spawnPoints [randomSpawnPointNum].position;
-
 			if (baddies.Count > 0)
 			{
+				int random = Random.Range (0, baddies.Count - 1);
+				baddies [random].SetActive (true);
+
+				int randomSpawnPointNum = Random.Range (0, spawnPoints.Count - 1);
+				baddies [random].transform.position = spawnPoints [randomSpawnPointNum].position;
+
+
 				baddies.RemoveAt (random);
 			}
 		}

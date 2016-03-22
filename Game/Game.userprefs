@@ -1,17 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\playerHealth.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HitPlayer.cs">
     <Files>
-      <File FileName="Assets\playerHealth.cs" Line="14" Column="23" />
-      <File FileName="Assets\SpawnControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\playerHealth.cs" Line="24" Column="29" />
+      <File FileName="Assets\SpawnControl.cs" Line="39" Column="18" />
       <File FileName="Assets\playerMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\ScoreControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\SetAsBaddie.cs" Line="1" Column="1" />
       <File FileName="Assets\SetAsSpawnPoint.cs" Line="1" Column="1" />
       <File FileName="Assets\StartGameButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\AddBaddies.cs" Line="1" Column="1" />
-      <File FileName="Assets\StaticVars.cs" Line="1" Column="1" />
+      <File FileName="Assets\AddBaddies.cs" Line="13" Column="1" />
+      <File FileName="Assets\StaticVars.cs" Line="8" Column="36" />
       <File FileName="Assets\HealthBar.cs" Line="1" Column="1" />
+      <File FileName="Assets\TimeControl.cs" Line="18" Column="8" />
+      <File FileName="Assets\HitPlayer.cs" Line="10" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
