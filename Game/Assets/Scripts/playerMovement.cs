@@ -8,13 +8,7 @@ public class playerMovement : MonoBehaviour
 	public float speed;
 	public float min;
 	public float max;
-
-//	void Start ()
-//	{
-//		character = GetComponent<CharacterController> ();
-//	}
-
-	
+		
 	void Update ()
 	{		
 		if (StaticVars.playerhealth > 0) 

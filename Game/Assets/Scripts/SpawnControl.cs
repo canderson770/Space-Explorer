@@ -8,7 +8,7 @@ public class SpawnControl : MonoBehaviour
 	public List<Transform> spawnPoints;
 
 	public float seconds = .5f;
-	public float RoundSeconds = 3;
+	public float RoundSeconds = 2.5f;
 
 	void Start()
 	{
@@ -32,12 +32,12 @@ public class SpawnControl : MonoBehaviour
 			if (baddies.Count > 0)
 			{
 				int random = Random.Range (0, baddies.Count - 1);
-				Rigidbody2D rigidbody = baddies [random].GetComponent<Rigidbody2D> ();
-				rigidbody.gravityScale = 1;
 
 				int randomSpawnPointNum = Random.Range (0, spawnPoints.Count - 1);
 				baddies [random].transform.position = spawnPoints [randomSpawnPointNum].position;
 
+				Rigidbody2D rigidbody = baddies [random].GetComponent<Rigidbody2D> ();
+				rigidbody.isKinematic = false;
 
 				baddies.RemoveAt (random);
 			}

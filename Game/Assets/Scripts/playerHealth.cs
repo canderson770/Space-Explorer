@@ -5,24 +5,27 @@ public class playerHealth : MonoBehaviour
 {
 	SpriteRenderer spriteRenderer;
 	public float damage = .5f;
+	public GameObject gameOver;
 
 	void Start()
 	{
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 	}
 
-	void OnCollisionEnter2D()
+	void OnTriggerEnter2D()
 	{
-		print ("hit");
-		if (StaticVars.playerhealth > 0) 
-		{
-			StaticVars.playerhealth -= damage;
-		}
-		if (StaticVars.playerhealth <= 0) 
-		{
-			spriteRenderer.enabled = false;
-			StaticVars.paused = true;
-		}
+			if (StaticVars.playerhealth > 0)
+			{
+				StaticVars.playerhealth -= damage;
+			}
+
+			if (StaticVars.playerhealth <= 0)
+			{
+				spriteRenderer.enabled = false;
+				StaticVars.paused = true;
+				gameOver.SetActive (true);
+			}
+
 	}
 
 
