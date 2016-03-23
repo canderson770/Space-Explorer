@@ -7,6 +7,9 @@ public class StartGame : MonoBehaviour
 
 	public void Play()
 	{
-		Application.LoadLevel (Level);	
+		Application.LoadLevel (Level);
+		StaticVars.score = 0;
+		StaticVars.playerhealth = 1.0f;
+		StaticVars.paused = false;
 	}
 }

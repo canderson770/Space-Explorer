@@ -45,9 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CountDown.cs" />
      <Compile Include="Assets\Scripts\AddBaddies.cs" />
+     <Compile Include="Assets\Scripts\CountDown.cs" />
      <Compile Include="Assets\Scripts\EndGame.cs" />
+     <Compile Include="Assets\Scripts\FinalScore.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\HitPlayer.cs" />
      <Compile Include="Assets\Scripts\ScoreControl.cs" />

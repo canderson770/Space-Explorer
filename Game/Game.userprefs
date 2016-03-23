@@ -2,15 +2,16 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CountDown.cs">
     <Files>
-      <File FileName="Assets\Scripts\AddBaddies.cs" Line="24" Column="1" />
+      <File FileName="Assets\FinalScore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AddBaddies.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SetAsBaddie.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SpawnControl.cs" Line="11" Column="34" />
+      <File FileName="Assets\Scripts\SpawnControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ScoreControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\HealthBar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\playerHealth.cs" Line="26" Column="5" />
-      <File FileName="Assets\Scripts\playerMovement.cs" Line="9" Column="18" />
+      <File FileName="Assets\Scripts\playerHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\playerMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\StartGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EndGame.cs" Line="4" Column="17" />
+      <File FileName="Assets\Scripts\EndGame.cs" Line="1" Column="1" />
       <File FileName="Assets\CountDown.cs" Line="26" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
