@@ -11,5 +11,6 @@ public class StartGame : MonoBehaviour
 		StaticVars.score = 0;
 		StaticVars.playerhealth = 1.0f;
 		StaticVars.paused = false;
+		StaticVars.isInvincible = false;
 	}
 }
