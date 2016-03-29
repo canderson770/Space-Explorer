@@ -1,18 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class playerMovement : MonoBehaviour
 {
 	//CharacterController character;
 	Vector3 moveVector;
-	public float speed;
-	public float min;
-	public float max;
+	public float speed = 15;
+	public float min = -9.8f;
+	public float max = 9.8f;
 	float playerDirection = 0;
+
+	bool cantMove = true;
+
+	void Start()
+	{
+		StartCoroutine (EnableMovement ());
+	}
+
+	IEnumerator EnableMovement()
+	{
+		yield return new WaitForSeconds (3);
+		cantMove = false;
+	}
 		
 	void Update ()
 	{		
-		if (StaticVars.playerhealth > 0)
+		if (StaticVars.playerhealth > 0 && cantMove == false)
 		{
 //			if (Input.touchCount > 0) 
 //			{
@@ -22,27 +36,27 @@ public class playerMovement : MonoBehaviour
 //				else if (touch.position.x > Screen.width / 2)
 //					playerDirection = 1;
 //
-//				float moveInX = playerDirection * speed * Time.deltaTime;
-//				Vector3 translateVector = new Vector3 (moveInX, 0, 0);	
-//				Vector3 newPosition = transform.position + translateVector;
+//				StaticVars.moveInX = playerDirection * speed * Time.deltaTime;
+//				Vector3 translateVector = new Vector3 (StaticVars.moveInX, 0, 0);	
+//				StaticVars.newPosition = transform.position + translateVector;
 //
 //
-//				if (newPosition.x >= min && newPosition.x <= max)
-//					transform.Translate (moveInX, 0, 0);	
+//				if (StaticVars.newPosition.x >= min && StaticVars.newPosition.x <= max)
+//					transform.Translate (StaticVars.moveInX, 0, 0);	
 //
 //			}
 
 
-			float moveInX = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
+			StaticVars.moveInX = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 //			print (Input.GetAxis ("Horizontal"));
 
-			Vector3 translateVector = new Vector3 (moveInX, 0, 0);	
+			Vector3 translateVector = new Vector3 (StaticVars.moveInX, 0, 0);	
 				
-			Vector3 newPosition = transform.position + translateVector;
+			StaticVars.newPosition = transform.position + translateVector;
 				
 				
-			if (newPosition.x > min && newPosition.x < max)
-				transform.Translate (moveInX, 0, 0);	
+			if (StaticVars.newPosition.x > min && StaticVars.newPosition.x < max)
+				transform.Translate (StaticVars.moveInX, 0, 0);	
 		}
 	}
 }

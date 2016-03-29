@@ -9,6 +9,7 @@ public class SpawnControl : MonoBehaviour
 
 	public float seconds = .5f;
 	public float RoundSeconds = 2.5f;
+	public float rotationSpeed = 40;
 
 	void Start()
 	{
@@ -38,6 +39,8 @@ public class SpawnControl : MonoBehaviour
 
 				Rigidbody2D rigidbody = baddies [random].GetComponent<Rigidbody2D> ();
 				rigidbody.isKinematic = false;
+
+				rigidbody.AddTorque (Random.Range (-rotationSpeed, rotationSpeed));
 
 				baddies.RemoveAt (random);
 			}
