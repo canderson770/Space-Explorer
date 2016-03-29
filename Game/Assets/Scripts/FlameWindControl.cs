@@ -5,6 +5,7 @@ public class FlameWindControl : MonoBehaviour
 {
 	WindZone wind;
 	public float flamesTrail = 50;
+	public float deadZone = 0.2f;
 
 	void Start ()
 	{
@@ -13,15 +14,15 @@ public class FlameWindControl : MonoBehaviour
 	
 	void Update ()
 	{
-		if (StaticVars.moveInX > 0)
+		if (StaticVars.moveInX > deadZone)
 		{
 			wind.windMain = StaticVars.moveInX * flamesTrail;
 		}
-		else if (StaticVars.moveInX < 0)
+		else if (StaticVars.moveInX < -deadZone)
 		{
 			wind.windMain = StaticVars.moveInX * flamesTrail;
 		}
-		else if (StaticVars.moveInX == 0)
+		else if (StaticVars.moveInX < deadZone && StaticVars.moveInX > -deadZone)
 		{
 			wind.windMain = 0;
 		}

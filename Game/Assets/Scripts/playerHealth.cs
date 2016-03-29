@@ -7,8 +7,10 @@ public class playerHealth : MonoBehaviour
 	CircleCollider2D playerCollider;
 	Animator anim;
 	AudioSource source;
+
 	public AudioClip hitSound;
 	public AudioClip deathSound;
+	public AudioClip coinSound;
 
 	public float damage = .5f;
 	public float invincibility = 1;
@@ -22,24 +24,37 @@ public class playerHealth : MonoBehaviour
 		source = GetComponent<AudioSource> ();
 	}
 
-	void OnTriggerEnter2D()
+	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (StaticVars.playerhealth > 0 && StaticVars.isInvincible == false)
+		if (coll.gameObject.name == "meteor")
+		{
+			if (StaticVars.playerhealth > 0 && StaticVars.isInvincible == false)
 			{
 				StaticVars.playerhealth -= damage;
 				StaticVars.isInvincible = true;
-				if(StaticVars.playerhealth > 0)
-					source.PlayOneShot(hitSound);
-				if(anim != null)
+
+				if (StaticVars.playerhealth > 0)
+					source.PlayOneShot (hitSound);
+				
+				if (anim != null) 
 				{
 					anim.updateMode = AnimatorUpdateMode.UnscaledTime;
 					anim.Play ("invincible");
 				}
+			
 				StartCoroutine (StopInvincible ());
 			}
-			
-		if (StaticVars.playerhealth <= 0)
-			Death ();
+
+			if (StaticVars.playerhealth <= 0)
+				Death ();
+		} 
+
+		else if (coll.gameObject.name == "coin") 
+		{
+			StaticVars.score += 500;
+			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+			source.PlayOneShot (coinSound);
+		}
 	}
 
 	void Death()
