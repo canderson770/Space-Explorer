@@ -7,8 +7,7 @@ public class SpawnControl : MonoBehaviour
 	public List<GameObject> baddies;
 	public List<Transform> spawnPoints;
 
-	public float seconds = .5f;
-	public float RoundSeconds = 2.5f;
+	public float spawnSeconds = .5f;
 	public float rotationSpeed = 40;
 
 	void Start()
@@ -26,10 +25,11 @@ public class SpawnControl : MonoBehaviour
 
 	IEnumerator Spawn()
 	{
-		yield return new WaitForSeconds (RoundSeconds);
-		while (StaticVars.playerhealth > 0)
+		yield return new WaitForSeconds (3-spawnSeconds);
+
+		while (StaticVars.lives > 0)
 		{
-			yield return new WaitForSeconds (seconds);
+			yield return new WaitForSeconds (spawnSeconds);
 			if (baddies.Count > 0)
 			{
 				int random = Random.Range (0, baddies.Count - 1);
@@ -49,7 +49,7 @@ public class SpawnControl : MonoBehaviour
 
 	void Update()
 	{
-		if (StaticVars.playerhealth <= 0)
+		if (StaticVars.lives <= 0)
 			StopAllCoroutines ();
 	}
 

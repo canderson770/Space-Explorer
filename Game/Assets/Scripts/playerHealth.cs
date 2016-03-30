@@ -12,7 +12,8 @@ public class playerHealth : MonoBehaviour
 	public AudioClip deathSound;
 	public AudioClip coinSound;
 
-	public float damage = .5f;
+	public int coinValue = 100;
+	public int damage = 1;
 	public float invincibility = 1;
 	public GameObject gameOver;
 
@@ -28,12 +29,12 @@ public class playerHealth : MonoBehaviour
 	{
 		if (coll.gameObject.name == "meteor")
 		{
-			if (StaticVars.playerhealth > 0 && StaticVars.isInvincible == false)
+			if (StaticVars.lives > 0 && StaticVars.isInvincible == false)
 			{
-				StaticVars.playerhealth -= damage;
+				StaticVars.lives -= damage;
 				StaticVars.isInvincible = true;
 
-				if (StaticVars.playerhealth > 0)
+				if (StaticVars.lives > 0)
 					source.PlayOneShot (hitSound);
 				
 				if (anim != null) 
@@ -45,13 +46,13 @@ public class playerHealth : MonoBehaviour
 				StartCoroutine (StopInvincible ());
 			}
 
-			if (StaticVars.playerhealth <= 0)
+			if (StaticVars.lives <= 0)
 				Death ();
 		} 
 
 		else if (coll.gameObject.name == "coin") 
 		{
-			StaticVars.score += 500;
+			StaticVars.score += coinValue;
 			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			source.PlayOneShot (coinSound);
 		}

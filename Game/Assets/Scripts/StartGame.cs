@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour
 	{
 		Application.LoadLevel (Level);
 		StaticVars.score = 0;
-		StaticVars.playerhealth = 1.0f;
+		StaticVars.lives = 3;
 		StaticVars.paused = false;
 		StaticVars.isInvincible = false;
 	}

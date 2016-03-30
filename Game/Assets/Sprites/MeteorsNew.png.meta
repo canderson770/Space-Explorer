@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: 71c05030954f3da4aaa532dd20d85886
+timeCreated: 1459282487
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MeteorsNew_0
+    21300002: MeteorsNew_1
+    21300004: MeteorsNew_2
+    21300006: MeteorsNew_3
+    21300008: MeteorsNew_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MeteorsNew_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 158
+        width: 147
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34.052734, y: 49.73047}
+        - {x: -45.947266, y: 49.73047}
+        - {x: -48.947266, y: 36.73047}
+        - {x: -48.947266, y: -31.269531}
+        - {x: -28.947266, y: -42.26953}
+        - {x: 1.0527344, y: -49.26953}
+        - {x: 48.052734, y: -49.26953}
+        - {x: 50.052734, y: -44.26953}
+        - {x: 50.052734, y: 29.730469}
+        - {x: 41.052734, y: 47.73047}
+    - name: MeteorsNew_1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 79
+        width: 339
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 114.44922, y: 52.615234}
+        - {x: 65.44922, y: 111.615234}
+        - {x: 45.44922, y: 113.615234}
+        - {x: -37.55078, y: 113.615234}
+        - {x: -47.55078, y: 106.615234}
+        - {x: -61.55078, y: 81.615234}
+        - {x: -60.55078, y: 57.615234}
+        - {x: -112.55078, y: 11.615234}
+        - {x: -112.55078, y: -48.384766}
+        - {x: -111.55078, y: -53.384766}
+        - {x: -62.55078, y: -93.384766}
+        - {x: -39.55078, y: -112.384766}
+        - {x: 50.44922, y: -112.384766}
+        - {x: 75.44922, y: -98.384766}
+        - {x: 105.44922, y: -61.384766}
+        - {x: 114.44922, y: -30.384766}
+    - name: MeteorsNew_2
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 95
+        width: 275
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91.57422, y: 89.271484}
+        - {x: 60.57422, y: 97.271484}
+        - {x: -27.425781, y: 97.271484}
+        - {x: -86.42578, y: 80.271484}
+        - {x: -91.42578, y: 59.271484}
+        - {x: -91.42578, y: -78.728516}
+        - {x: -73.42578, y: -96.728516}
+        - {x: 26.574219, y: -96.728516}
+        - {x: 32.57422, y: -75.728516}
+        - {x: 92.57422, y: 0.27148438}
+        - {x: 92.57422, y: 82.271484}
+    - name: MeteorsNew_3
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 62
+        width: 356
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 119.29297, y: 114.29297}
+        - {x: 99.29297, y: 124.29297}
+        - {x: 59.29297, y: 124.29297}
+        - {x: 8.292969, y: 109.29297}
+        - {x: -75.70703, y: 85.29297}
+        - {x: -99.70703, y: 39.29297}
+        - {x: -98.70703, y: 15.292969}
+        - {x: -111.70703, y: -34.70703}
+        - {x: -118.70703, y: -67.70703}
+        - {x: -118.70703, y: -97.70703}
+        - {x: -90.70703, y: -123.70703}
+        - {x: -11.707031, y: -123.70703}
+        - {x: 27.292969, y: -108.70703}
+        - {x: 84.29297, y: -63.70703}
+        - {x: 119.29297, y: -3.7070312}
+    - name: MeteorsNew_4
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 95
+        width: 242
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64.603516, y: 59.771484}
+        - {x: -79.603516, y: 27.771484}
+        - {x: -79.603516, y: -32.228516}
+        - {x: -67.603516, y: -59.228516}
+        - {x: 53.396484, y: -59.228516}
+        - {x: 82.396484, y: -35.228516}
+        - {x: 82.396484, y: 56.771484}
+        - {x: 71.396484, y: 59.771484}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

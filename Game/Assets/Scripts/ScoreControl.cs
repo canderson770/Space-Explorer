@@ -23,6 +23,6 @@ public class ScoreControl : MonoBehaviour
 			StaticVars.score += 1;
 			scoreText.text = StaticVars.score.ToString().PadLeft(6, '0');
 
-		} while (StaticVars.playerhealth > 0);
+		} while (StaticVars.lives > 0);
 	}
 }

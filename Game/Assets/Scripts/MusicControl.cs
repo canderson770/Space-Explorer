@@ -12,7 +12,7 @@ public class MusicControl : MonoBehaviour
 
 	void Update ()
 	{
-		if (StaticVars.playerhealth <= 0)
+		if (StaticVars.lives <= 0)
 			music.Stop ();
 	}
 }

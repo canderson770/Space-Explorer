@@ -26,7 +26,7 @@ public class playerMovement : MonoBehaviour
 		
 	void Update ()
 	{		
-		if (StaticVars.playerhealth > 0 && cantMove == false)
+		if (StaticVars.lives > 0 && cantMove == false)
 		{
 //			if (Input.touchCount > 0) 
 //			{
