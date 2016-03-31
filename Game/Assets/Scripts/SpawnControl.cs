@@ -18,8 +18,8 @@ public class SpawnControl : MonoBehaviour
 		objects = new List<GameObject> ();
 
 		SetAsSpawnPoint.PassSpawnPointTransform += AddToSpawnPointsList;
-		SetAsBaddie.PassBaddieGameObject += AddToBaddiesList;
-		AddBaddies.AddBaddiesBack += AddToBaddiesList;
+		SetAsObject.PassObjectGameObject += AddToObjectsList;
+		AddObjects.AddObjectsBack += AddToObjectsList;
 
 		StartCoroutine (Spawn ());
 
@@ -70,7 +70,7 @@ public class SpawnControl : MonoBehaviour
 		spawnPoints.Add (_spawnPoint);
 	}
 
-	void AddToBaddiesList(GameObject _obj)
+	void AddToObjectsList(GameObject _obj)
 	{
 		objects.Add (_obj);
 	}

@@ -2,9 +2,9 @@
 using System.Collections;
 using System;
 
-public class AddBaddies : MonoBehaviour 
+public class AddObjects : MonoBehaviour 
 {
-	public static Action<GameObject> AddBaddiesBack;
+	public static Action<GameObject> AddObjectsBack;
 	Rigidbody2D rigidbody;
 
 	void Start()
@@ -16,9 +16,9 @@ public class AddBaddies : MonoBehaviour
 	{
 		if (hit.gameObject.name == "floor")
 		{
-			if (AddBaddiesBack != null) 
+			if (AddObjectsBack != null) 
 			{
-				AddBaddiesBack (this.gameObject);
+				AddObjectsBack (this.gameObject);
 			}
 
 			rigidbody.isKinematic = true;

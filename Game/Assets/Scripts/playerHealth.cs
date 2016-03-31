@@ -54,7 +54,7 @@ public class playerHealth : MonoBehaviour
 		{
 			StaticVars.score += coinValue;
 			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
-			source.PlayOneShot (coinSound, 2);
+			source.PlayOneShot (coinSound, 1);
 		}
 
 		else if (coll.gameObject.name == "extraLife") 
@@ -62,7 +62,7 @@ public class playerHealth : MonoBehaviour
 			if(StaticVars.lives < 3)
 				StaticVars.lives += 1;
 			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
-			source.PlayOneShot (coinSound, 2);
+			source.PlayOneShot (coinSound, 1);
 		}
 	}
 

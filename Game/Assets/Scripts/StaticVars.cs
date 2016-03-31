@@ -10,4 +10,11 @@ public class StaticVars : MonoBehaviour
 	public static bool isInvincible = false;
 	public static Vector3 newPosition;
 	public static float moveInX;
+
+	public enum weapons
+	{
+		Gun, Laser, Missle 
+	}
+
+	public static weapons CurrentWeapon = weapons.Gun;
 }
