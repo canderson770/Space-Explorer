@@ -22,6 +22,8 @@ public class AddBaddies : MonoBehaviour
 			}
 
 			rigidbody.isKinematic = true;
+
+			this.GetComponent<SpriteRenderer> ().enabled = true;
 		}
 	}
 }

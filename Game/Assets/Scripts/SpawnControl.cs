@@ -4,16 +4,18 @@ using System.Collections.Generic;
 
 public class SpawnControl : MonoBehaviour
 {
-	public List<GameObject> baddies;
+	public List<GameObject> objects;
 	public List<Transform> spawnPoints;
 
-	public float spawnSeconds = .5f;
+	public float spawnSeconds = .7f;
 	public float rotationSpeed = 40;
+	public float lifeSpawnSeconds = 30;
+	float timeSinceLastLife = 0;
 
 	void Start()
 	{
 		spawnPoints = new List<Transform> ();
-		baddies = new List<GameObject> ();
+		objects = new List<GameObject> ();
 
 		SetAsSpawnPoint.PassSpawnPointTransform += AddToSpawnPointsList;
 		SetAsBaddie.PassBaddieGameObject += AddToBaddiesList;
@@ -25,32 +27,42 @@ public class SpawnControl : MonoBehaviour
 
 	IEnumerator Spawn()
 	{
-		yield return new WaitForSeconds (3-spawnSeconds);
+		yield return new WaitForSeconds (3);
 
 		while (StaticVars.lives > 0)
 		{
-			yield return new WaitForSeconds (spawnSeconds);
-			if (baddies.Count > 0)
+			if (objects.Count > 0) 
 			{
-				int random = Random.Range (0, baddies.Count - 1);
-
+				int random = Random.Range (0, objects.Count - 1);
 				int randomSpawnPointNum = Random.Range (0, spawnPoints.Count - 1);
-				baddies [random].transform.position = spawnPoints [randomSpawnPointNum].position;
 
-				Rigidbody2D rigidbody = baddies [random].GetComponent<Rigidbody2D> ();
-				rigidbody.isKinematic = false;
+				if(objects[random].name == "extraLife")
+				{
+					if (Time.timeSinceLevelLoad < lifeSpawnSeconds || timeSinceLastLife < 5)
+						continue;
+					timeSinceLastLife = 0;
+				}
+					
+				objects [random].transform.position = spawnPoints [randomSpawnPointNum].position;
 
-				rigidbody.AddTorque (Random.Range (-rotationSpeed, rotationSpeed));
+				Rigidbody2D thisRigidbody = objects [random].GetComponent<Rigidbody2D> ();
+				thisRigidbody.isKinematic = false;
 
-				baddies.RemoveAt (random);
+				thisRigidbody.AddTorque (Random.Range (-rotationSpeed, rotationSpeed));
+
+				objects.RemoveAt (random);
 			}
+			yield return new WaitForSeconds (spawnSeconds);
 		}
+
 	}
 
 	void Update()
 	{
 		if (StaticVars.lives <= 0)
 			StopAllCoroutines ();
+
+		timeSinceLastLife += 1 * Time.deltaTime;
 	}
 
 	void AddToSpawnPointsList(Transform _spawnPoint)
@@ -58,8 +70,8 @@ public class SpawnControl : MonoBehaviour
 		spawnPoints.Add (_spawnPoint);
 	}
 
-	void AddToBaddiesList(GameObject _baddie)
+	void AddToBaddiesList(GameObject _obj)
 	{
-		baddies.Add (_baddie);
+		objects.Add (_obj);
 	}
 }

@@ -12,7 +12,7 @@ public class FlameWindControl : MonoBehaviour
 		wind = GetComponent<WindZone> ();
 	}
 	
-	void Update ()
+	void FixedUpdate ()
 	{
 		if (StaticVars.moveInX > deadZone)
 		{

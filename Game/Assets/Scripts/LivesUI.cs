@@ -12,17 +12,22 @@ public class LivesUI : MonoBehaviour
 		switch (StaticVars.lives) 
 		{
 		case 3: 
-			for (int i = 0; i < livesArray.Count - 1; i++)
+			for (int i = 0; i < livesArray.Count; i++)
 				livesArray [i].SetActive (true);
 			break;
 		case 2:
 			livesArray [2].SetActive (false);
+			livesArray [1].SetActive (true);
+			livesArray [0].SetActive (true);
 			break;
 		case 1:
+			livesArray [2].SetActive (false);
 			livesArray [1].SetActive (false);
+			livesArray [0].SetActive (true);
 			break;
 		case 0: 
-			livesArray [0].SetActive (false);
+			for (int i = 0; i < livesArray.Count; i++)
+				livesArray [i].SetActive (false);
 			break;
 		}
 	}

@@ -2,15 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class playerMovement : MonoBehaviour
+[System.Serializable]
+public class Boundary : System.Object
 {
-	//CharacterController character;
-	Vector3 moveVector;
-	public float speed = 15;
 	public float min = -9.8f;
 	public float max = 9.8f;
-	float playerDirection = 0;
+}
 
+public class playerMovement : MonoBehaviour
+{
+	Vector3 moveVector;
+
+	public float speed = 15;
+	public Boundary boundary;
+
+	float playerDirection = 0;
 	bool cantMove = true;
 
 	void Start()
@@ -24,39 +30,38 @@ public class playerMovement : MonoBehaviour
 		cantMove = false;
 	}
 		
-	void Update ()
+	void FixedUpdate ()
 	{		
 		if (StaticVars.lives > 0 && cantMove == false)
 		{
-//			if (Input.touchCount > 0) 
-//			{
-//				Touch touch = Input.GetTouch (0);
-//				if (touch.position.x < Screen.width / 2)
-//					playerDirection = -1;
-//				else if (touch.position.x > Screen.width / 2)
-//					playerDirection = 1;
-//
-//				StaticVars.moveInX = playerDirection * speed * Time.deltaTime;
-//				Vector3 translateVector = new Vector3 (StaticVars.moveInX, 0, 0);	
-//				StaticVars.newPosition = transform.position + translateVector;
-//
-//
-//				if (StaticVars.newPosition.x >= min && StaticVars.newPosition.x <= max)
-//					transform.Translate (StaticVars.moveInX, 0, 0);	
-//
-//			}
+			if (Input.touchCount > 0) 
+			{
+				Touch touch = Input.GetTouch (0);
+				if (touch.position.x < Screen.width / 2)
+					playerDirection = -1;
+				else if (touch.position.x > Screen.width / 2)
+					playerDirection = 1;
+
+				StaticVars.moveInX = playerDirection * speed/2 * Time.deltaTime;
+				Vector3 translateVector = new Vector3 (StaticVars.moveInX, 0, 0);	
+				StaticVars.newPosition = transform.position + translateVector;
 
 
-			StaticVars.moveInX = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
-//			print (Input.GetAxis ("Horizontal"));
+				if (StaticVars.newPosition.x >= boundary.min && StaticVars.newPosition.x <= boundary.max)
+					transform.Translate (StaticVars.moveInX, 0, 0);	
 
-			Vector3 translateVector = new Vector3 (StaticVars.moveInX, 0, 0);	
-				
-			StaticVars.newPosition = transform.position + translateVector;
-				
-				
-			if (StaticVars.newPosition.x > min && StaticVars.newPosition.x < max)
-				transform.Translate (StaticVars.moveInX, 0, 0);	
+			} 
+
+			else
+			{
+				StaticVars.moveInX = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
+
+				Vector3 translateVector = new Vector3 (StaticVars.moveInX, 0, 0);	
+				StaticVars.newPosition = transform.position + translateVector;
+
+				if (StaticVars.newPosition.x >= boundary.min && StaticVars.newPosition.x <= boundary.max)
+					transform.Translate (StaticVars.moveInX, 0, 0);
+			}
 		}
 	}
 }
