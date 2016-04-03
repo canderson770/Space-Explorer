@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 7f38e5899d059b64ab8919b72b1e2cc0
+timeCreated: 1459672989
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: stopwatch_0
+    21300002: stopwatch_1
+    21300004: stopwatch_2
+    21300006: stopwatch_3
+    21300008: stopwatch_4
+    21300010: stopwatch_5
+    21300012: stopwatch_6
+    21300014: stopwatch_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: stopwatch_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    - name: stopwatch_1
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    - name: stopwatch_2
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    - name: stopwatch_3
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    - name: stopwatch_4
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    - name: stopwatch_5
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    - name: stopwatch_6
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    - name: stopwatch_7
+      rect:
+        serializedVersion: 2
+        x: 3727
+        y: 127
+        width: 242
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 46.5}
+        - {x: 25.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -60.5, y: 25.5}
+        - {x: -60.5, y: -54.5}
+        - {x: -23.5, y: -72.5}
+        - {x: 41.5, y: -72.5}
+        - {x: 61.5, y: -54.5}
+        - {x: 61.5, y: 14.5}
+        - {x: 53.5, y: 28.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

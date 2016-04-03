@@ -1,18 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Weapon : MonoBehaviour
 {
-	public float gunSpeed;
-	Rigidbody2D rb;
+	public static float gunSpeed;
+	public static Action<GameObject> PassBullets;
 
 	void Start() 
 	{
-		rb = GetComponent<Rigidbody2D>();
-	}
-
-	void FixedUpdate() 
-	{
-		rb.AddForce(0, 1);
+		if (PassBullets != null)
+			PassBullets (gameObject);
 	}
 }

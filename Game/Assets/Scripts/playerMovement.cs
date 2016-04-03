@@ -30,8 +30,13 @@ public class playerMovement : MonoBehaviour
 		cantMove = false;
 	}
 		
+		
 	void FixedUpdate ()
 	{		
+		if (StaticVars.slowMotion)
+			speed = 30;
+		if (!StaticVars.slowMotion)
+			speed = 15;
 		if (StaticVars.lives > 0 && cantMove == false)
 		{
 			if (Input.touchCount > 0) 

@@ -3,9 +3,13 @@ using System.Collections;
 
 public class Gun : Weapon 
 {
-
-	void OnTriggerEnter2D(Collider2D coll)
+	void Update()
 	{
-		
+		if (StaticVars.CurrentWeapon == StaticVars.weapons.Gun) 
+		{
+			print ("Gun");
+			gunSpeed = 10;
+			transform.localScale = new Vector2 (.1f, .1f);
+		}
 	}
 }

@@ -14,5 +14,9 @@ public class MusicControl : MonoBehaviour
 	{
 		if (StaticVars.lives <= 0)
 			music.Stop ();
+		if (StaticVars.slowMotion)
+			music.pitch = .75f;
+		else
+			music.pitch = 1;
 	}
 }

@@ -38,7 +38,13 @@ public class SpawnControl : MonoBehaviour
 
 				if(objects[random].name == "extraLife")
 				{
-					if (Time.timeSinceLevelLoad < lifeSpawnSeconds || timeSinceLastLife < 5)
+					if (Time.timeSinceLevelLoad < lifeSpawnSeconds || timeSinceLastLife < 5 || StaticVars.lives == 3)
+						continue;
+					timeSinceLastLife = 0;
+				}
+				if(objects[random].name == "stopwatch")
+				{
+					if (Time.timeSinceLevelLoad < lifeSpawnSeconds * 1.5f || timeSinceLastLife < 15)
 						continue;
 					timeSinceLastLife = 0;
 				}

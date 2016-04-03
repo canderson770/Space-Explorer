@@ -11,11 +11,16 @@ public class playerHealth : MonoBehaviour
 	public AudioClip hitSound;
 	public AudioClip deathSound;
 	public AudioClip coinSound;
+	public AudioClip slowDownSound;
+	public AudioClip speedUpSound;
 
+	public float timeSlowLength;
 	public int coinValue = 100;
 	public int damage = 1;
 	public float invincibility = 1;
 	public GameObject gameOver;
+
+	bool slowMotion = true;
 
 	void Start()
 	{
@@ -64,6 +69,12 @@ public class playerHealth : MonoBehaviour
 			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			source.PlayOneShot (coinSound, 1);
 		}
+
+		else if (coll.gameObject.name == "stopwatch") 
+		{
+			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+			StartCoroutine(StopWatch ());
+		}
 	}
 
 	void Death()
@@ -83,5 +94,17 @@ public class playerHealth : MonoBehaviour
 	{
 		yield return new WaitForSeconds (invincibility);
 		StaticVars.isInvincible = false;
+	}
+
+	IEnumerator StopWatch()
+	{
+		source.PlayOneShot (slowDownSound, 2);
+		StaticVars.slowMotion = true;
+		print ("slow");
+		yield return new WaitForSeconds (timeSlowLength - 7);
+		source.PlayOneShot (speedUpSound, 1.5f);
+		yield return new WaitForSeconds (3);
+		StaticVars.slowMotion = false;
+		print ("normal");
 	}
 }
