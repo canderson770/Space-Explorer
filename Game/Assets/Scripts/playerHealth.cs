@@ -101,9 +101,9 @@ public class playerHealth : MonoBehaviour
 		source.PlayOneShot (slowDownSound, 2);
 		StaticVars.slowMotion = true;
 		print ("slow");
-		yield return new WaitForSeconds (timeSlowLength - 7);
-		source.PlayOneShot (speedUpSound, 1.5f);
-		yield return new WaitForSeconds (3);
+//		yield return new WaitForSeconds (timeSlowLength - 7);
+//		source.PlayOneShot (speedUpSound, 1.5f);
+		yield return new WaitForSeconds (15);
 		StaticVars.slowMotion = false;
 		print ("normal");
 	}

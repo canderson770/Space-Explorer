@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Laser :  Weapon 
+public class Missile : Weapon
 {
 	void Start()
 	{
-		bulletSpeed = 20;
+		bulletSpeed = 10;
+		damage = 3;
 		base.Start();
 	}
 }

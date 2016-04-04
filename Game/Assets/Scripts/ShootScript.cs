@@ -4,38 +4,27 @@ using System.Collections.Generic;
 
 public class ShootScript : MonoBehaviour
 {
-	public List<GameObject> bullets;
+	public List<GameObject> weaponList;
 
 	void Start()
 	{
-		bullets = new List<GameObject> ();
-		Weapon.PassBullets += AddBullets;
-
 		StartCoroutine (Shoot ());
 	}
-		
 
 	IEnumerator Shoot()
 	{
-		yield return new WaitForSeconds (3.1f);
-		bullets [0].transform.position = transform.position;
-		bullets[0].GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+		yield return new WaitForSeconds (3);
 
-		yield return new WaitForSeconds (.5f);
-		StaticVars.CurrentWeapon = StaticVars.weapons.Laser;
-		bullets [1].transform.position = transform.position;
-		bullets[1].GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-
-		yield return new WaitForSeconds (.5f);
-		StaticVars.CurrentWeapon = StaticVars.weapons.Laser;
-		bullets [2].transform.position = transform.position;
-		bullets[2].GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-	}
-
-
-
-	void AddBullets(GameObject _bullet)
-	{
-		bullets.Add (_bullet);
+		while (StaticVars.lives > 0) 
+		{
+			if(StaticVars.CurrentWeapon == StaticVars.weapons.Gun)
+				Instantiate (weaponList [0], transform.position, Quaternion.identity);
+			if(StaticVars.CurrentWeapon == StaticVars.weapons.Laser)
+				Instantiate (weaponList [1], transform.position, Quaternion.identity);
+			if(StaticVars.CurrentWeapon == StaticVars.weapons.Missle)
+				Instantiate (weaponList [2], transform.position, Quaternion.identity);
+			
+			yield return new WaitForSeconds (StaticVars.fireRate);
+		}
 	}
 }

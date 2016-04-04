@@ -30,7 +30,28 @@ public class playerMovement : MonoBehaviour
 		cantMove = false;
 	}
 		
-		
+	void Update()
+	{
+		if (Input.GetKey (KeyCode.Keypad1))
+		{
+			StaticVars.CurrentWeapon = StaticVars.weapons.Gun;
+			StaticVars.fireRate = .5f;
+			print ("gun");
+		}
+		if (Input.GetKey (KeyCode.Keypad2)) 
+		{
+			StaticVars.CurrentWeapon = StaticVars.weapons.Laser;
+			StaticVars.fireRate = 1;
+			print ("laser");
+		}
+		if (Input.GetKey (KeyCode.Keypad3)) 
+		{
+			StaticVars.CurrentWeapon = StaticVars.weapons.Missle;
+			StaticVars.fireRate = 2;
+			print ("missile");
+		}
+	}
+
 	void FixedUpdate ()
 	{		
 		if (StaticVars.slowMotion)

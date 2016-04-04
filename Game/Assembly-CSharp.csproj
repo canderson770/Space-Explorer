@@ -45,12 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CeilingScript.cs" />
+     <Compile Include="Assets\Meteor.cs" />
      <Compile Include="Assets\Scripts\AddObjects.cs" />
      <Compile Include="Assets\Scripts\FlameWindControl.cs" />
      <Compile Include="Assets\Scripts\GameOperation.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\Laser.cs" />
      <Compile Include="Assets\Scripts\LivesUI.cs" />
+     <Compile Include="Assets\Scripts\Missile.cs" />
      <Compile Include="Assets\Scripts\ScoreControl.cs" />
      <Compile Include="Assets\Scripts\SetAsObject.cs" />
      <Compile Include="Assets\Scripts\SetAsSpawnPoint.cs" />

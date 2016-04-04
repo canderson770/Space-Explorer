@@ -11,6 +11,7 @@ public class StaticVars : MonoBehaviour
 	public static bool isInvincible = false;
 	public static Vector3 newPosition;
 	public static float moveInX;
+	public static float fireRate = .5f;
 
 	public enum weapons
 	{

@@ -3,13 +3,9 @@ using System.Collections;
 
 public class Gun : Weapon 
 {
-	void Update()
+	void Start()
 	{
-		if (StaticVars.CurrentWeapon == StaticVars.weapons.Gun) 
-		{
-			print ("Gun");
-			gunSpeed = 10;
-			transform.localScale = new Vector2 (.1f, .1f);
-		}
+		bulletSpeed = 30;
+		base.Start();
 	}
 }
