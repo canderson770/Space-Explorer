@@ -7,8 +7,7 @@ public class SpawnControl : MonoBehaviour
 	public List<GameObject> objects;
 	public List<Transform> spawnPoints;
 
-	public float spawnSeconds = .7f;
-	public float rotationSpeed = 40;
+	public static float spawnSeconds = 1f;
 	float timeSinceLastObj = 0;
 
 	void Start()
@@ -37,30 +36,32 @@ public class SpawnControl : MonoBehaviour
 
 				if(objects[random].name == "extraLife")
 				{
-					if (Time.timeSinceLevelLoad < 30 || timeSinceLastObj < 5 || StaticVars.lives == 3)
+					if (Time.timeSinceLevelLoad < 30 || timeSinceLastObj < 5 || StaticVars.lives == 3) 
+					{
 						continue;
-					timeSinceLastObj = 0;
+						timeSinceLastObj = 0;
+					}
 				}
-				if(objects[random].name == "stopwatch")
+				if (objects [random].name == "stopwatch")
 				{
-					if (Time.timeSinceLevelLoad < 45 || timeSinceLastObj < 30)
+					if (Time.timeSinceLevelLoad < 45 || timeSinceLastObj < 20)
+					{
 						continue;
-					timeSinceLastObj = 0;
+						timeSinceLastObj = 0;
+					}
 				}
 				if(objects[random].name == "coin")
 				{
-					if (Time.timeSinceLevelLoad < 5 || timeSinceLastObj < 1)
+					if (Time.timeSinceLevelLoad < 5 || timeSinceLastObj < 1) 
+					{
 						continue;
-					timeSinceLastObj = 0;
+						timeSinceLastObj = 0;
+					}
 				}
 
 				Instantiate (objects [random], spawnPoints [randomSpawnPointNum].position, Quaternion.identity);
-
-				Rigidbody2D thisRigidbody = objects [random].GetComponent<Rigidbody2D> ();
-				thisRigidbody.isKinematic = false;
-
-				thisRigidbody.AddTorque (Random.Range (-rotationSpeed, rotationSpeed));
 			}
+
 			yield return new WaitForSeconds (spawnSeconds);
 		}
 

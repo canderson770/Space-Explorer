@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: 7703f290aa31d1e499819f715359f48a
-timeCreated: 1459671704
-licenseType: Free
+timeCreated: 1459876063
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: playerBackup_0
+    21300002: playerBackup_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +32,66 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: playerBackup_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 114}
+        - {x: -25, y: 114}
+        - {x: -114, y: -36}
+        - {x: -114, y: -114}
+        - {x: 98, y: -114}
+        - {x: 98, y: -40}
+    - name: playerBackup_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98, y: -112}
+        - {x: 98, y: -40}
+        - {x: 3, y: 114}
+        - {x: -25, y: 114}
+        - {x: -114, y: -36}
+        - {x: -114, y: -112}
+        - {x: -112, y: -114}
+        - {x: -77, y: -146}
+        - {x: 42, y: -146}
+        - {x: 86, y: -118}
+        - {x: 68, y: -124}
+        - {x: 97, y: -116}
     outline: []
   spritePackingTag: 
   userData: 

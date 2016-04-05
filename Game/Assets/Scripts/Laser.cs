@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Laser :  Weapon 
+public class Laser :  Gun 
 {
 	void Start()
 	{

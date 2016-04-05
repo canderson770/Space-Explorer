@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playerHealth : MonoBehaviour
+public class playerController : MonoBehaviour
 {
 	SpriteRenderer spriteRenderer;
 	CircleCollider2D playerCollider;
@@ -15,7 +15,6 @@ public class playerHealth : MonoBehaviour
 	public AudioClip speedUpSound;
 
 	public float timeSlowLength;
-	public int coinValue = 100;
 	public int damage = 1;
 	public float invincibility = 1;
 	public GameObject gameOver;
@@ -57,7 +56,7 @@ public class playerHealth : MonoBehaviour
 
 		else if (coll.gameObject.tag == "Coin") 
 		{
-			StaticVars.score += coinValue;
+			StaticVars.coins += 1;
 			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			source.PlayOneShot (coinSound, 1);
 		}
@@ -103,7 +102,7 @@ public class playerHealth : MonoBehaviour
 		print ("slow");
 //		yield return new WaitForSeconds (timeSlowLength - 7);
 //		source.PlayOneShot (speedUpSound, 1.5f);
-		yield return new WaitForSeconds (15);
+		yield return new WaitForSeconds (10);
 		StaticVars.slowMotion = false;
 		print ("normal");
 	}

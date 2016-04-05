@@ -9,7 +9,7 @@ public class Boundary : System.Object
 	public float max = 9.8f;
 }
 
-public class playerMovement : MonoBehaviour
+public class playerInput : MonoBehaviour
 {
 	Vector3 moveVector;
 

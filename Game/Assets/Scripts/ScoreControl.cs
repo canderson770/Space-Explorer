@@ -4,12 +4,15 @@ using System.Collections;
 
 public class ScoreControl : MonoBehaviour
 {
+	Text scoreText;
+
 	public float scoreTime;
-	public Text scoreText;
 	public float RoundSeconds = 3;
 
 	public void Start()
 	{
+		scoreText = GetComponent<Text> ();
+
 		StartCoroutine (Score ());
 	}
 	

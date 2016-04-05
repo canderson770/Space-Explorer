@@ -1,21 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class Meteor : MonoBehaviour 
 {
 	AudioSource audio;
 	Animator anim;
+	Rigidbody2D rb;
 
 	public float meteorHealth;
 	public int meteorPoints;
+	public float rotationSpeed = 40;
+
 	public GameObject score;
 	public GameObject particles;
+
 
 	void Start()
 	{
 		audio = GetComponent<AudioSource> ();
 		anim = GetComponent<Animator> ();
+		rb = GetComponent<Rigidbody2D> ();
+
+		rb.isKinematic = false;
+		rb.AddTorque (Random.Range (-rotationSpeed, rotationSpeed));
 	}
 
 	public void CheckHealth()
