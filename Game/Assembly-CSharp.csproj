@@ -45,14 +45,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CeilingScript.cs" />
-     <Compile Include="Assets\Meteor.cs" />
      <Compile Include="Assets\Scripts\AddObjects.cs" />
+     <Compile Include="Assets\Scripts\CeilingScript.cs" />
+     <Compile Include="Assets\Scripts\DestroyObject.cs" />
      <Compile Include="Assets\Scripts\FlameWindControl.cs" />
      <Compile Include="Assets\Scripts\GameOperation.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\Laser.cs" />
      <Compile Include="Assets\Scripts\LivesUI.cs" />
+     <Compile Include="Assets\Scripts\Meteor.cs" />
+     <Compile Include="Assets\Scripts\MeteorExplosion.cs" />
+     <Compile Include="Assets\Scripts\MeteorScore.cs" />
      <Compile Include="Assets\Scripts\Missile.cs" />
      <Compile Include="Assets\Scripts\ScoreControl.cs" />
      <Compile Include="Assets\Scripts\SetAsObject.cs" />
@@ -68,6 +71,7 @@
      <Compile Include="Assets\Scripts\Short Scripts\SunControl.cs" />
      <Compile Include="Assets\Scripts\Short Scripts\TimeControl.cs" />
      <Compile Include="Assets\Scripts\SpawnControl.cs" />
+     <Compile Include="Assets\Scripts\SpawnControlOld.cs" />
      <Compile Include="Assets\Scripts\StaticVars.cs" />
      <Compile Include="Assets\Scripts\UIScripts\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\UIScripts\EventSystemChecker.cs" />

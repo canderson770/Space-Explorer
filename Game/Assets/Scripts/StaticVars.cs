@@ -13,10 +13,22 @@ public class StaticVars : MonoBehaviour
 	public static float moveInX;
 	public static float fireRate = .5f;
 
+	public static int tempScore;
+
 	public enum weapons
 	{
 		Gun, Laser, Missle 
 	}
 
 	public static weapons CurrentWeapon = weapons.Gun;
+
+	public static void Reset()
+	{
+		score = 0;
+		lives = 3;
+		paused = false;
+		slowMotion = false;
+		isInvincible = false;
+		fireRate = .75f;
+	}
 }

@@ -35,20 +35,17 @@ public class playerMovement : MonoBehaviour
 		if (Input.GetKey (KeyCode.Keypad1))
 		{
 			StaticVars.CurrentWeapon = StaticVars.weapons.Gun;
-			StaticVars.fireRate = .5f;
-			print ("gun");
+			StaticVars.fireRate = .75f;
 		}
 		if (Input.GetKey (KeyCode.Keypad2)) 
 		{
 			StaticVars.CurrentWeapon = StaticVars.weapons.Laser;
 			StaticVars.fireRate = 1;
-			print ("laser");
 		}
 		if (Input.GetKey (KeyCode.Keypad3)) 
 		{
 			StaticVars.CurrentWeapon = StaticVars.weapons.Missle;
-			StaticVars.fireRate = 2;
-			print ("missile");
+			StaticVars.fireRate = 1;
 		}
 	}
 

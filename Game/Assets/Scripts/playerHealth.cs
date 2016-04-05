@@ -32,7 +32,7 @@ public class playerHealth : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.gameObject.name == "meteor")
+		if (coll.gameObject.tag == "Meteor")
 		{
 			if (StaticVars.lives > 0 && StaticVars.isInvincible == false)
 			{
@@ -55,14 +55,14 @@ public class playerHealth : MonoBehaviour
 				Death ();
 		} 
 
-		else if (coll.gameObject.name == "coin") 
+		else if (coll.gameObject.tag == "Coin") 
 		{
 			StaticVars.score += coinValue;
 			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			source.PlayOneShot (coinSound, 1);
 		}
 
-		else if (coll.gameObject.name == "extraLife") 
+		else if (coll.gameObject.tag == "Life") 
 		{
 			if(StaticVars.lives < 3)
 				StaticVars.lives += 1;
@@ -70,7 +70,7 @@ public class playerHealth : MonoBehaviour
 			source.PlayOneShot (coinSound, 1);
 		}
 
-		else if (coll.gameObject.name == "stopwatch") 
+		else if (coll.gameObject.tag == "Stopwatch") 
 		{
 			coll.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			StartCoroutine(StopWatch ());

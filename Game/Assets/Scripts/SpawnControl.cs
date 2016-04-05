@@ -9,17 +9,16 @@ public class SpawnControl : MonoBehaviour
 
 	public float spawnSeconds = .7f;
 	public float rotationSpeed = 40;
-	public float lifeSpawnSeconds = 30;
-	float timeSinceLastLife = 0;
+	float timeSinceLastObj = 0;
 
 	void Start()
 	{
 		spawnPoints = new List<Transform> ();
-		objects = new List<GameObject> ();
+//		objects = new List<GameObject> ();
 
 		SetAsSpawnPoint.PassSpawnPointTransform += AddToSpawnPointsList;
-		SetAsObject.PassObjectGameObject += AddToObjectsList;
-		AddObjects.AddObjectsBack += AddToObjectsList;
+//		SetAsObject.PassObjectGameObject += AddToObjectsList;
+//		AddObjects.AddObjectsBack += AddToObjectsList;
 
 		StartCoroutine (Spawn ());
 
@@ -38,25 +37,29 @@ public class SpawnControl : MonoBehaviour
 
 				if(objects[random].name == "extraLife")
 				{
-					if (Time.timeSinceLevelLoad < lifeSpawnSeconds || timeSinceLastLife < 5 || StaticVars.lives == 3)
+					if (Time.timeSinceLevelLoad < 30 || timeSinceLastObj < 5 || StaticVars.lives == 3)
 						continue;
-					timeSinceLastLife = 0;
+					timeSinceLastObj = 0;
 				}
 				if(objects[random].name == "stopwatch")
 				{
-					if (Time.timeSinceLevelLoad < lifeSpawnSeconds * 1.5f || timeSinceLastLife < 15)
+					if (Time.timeSinceLevelLoad < 45 || timeSinceLastObj < 30)
 						continue;
-					timeSinceLastLife = 0;
+					timeSinceLastObj = 0;
 				}
-					
-				objects [random].transform.position = spawnPoints [randomSpawnPointNum].position;
+				if(objects[random].name == "coin")
+				{
+					if (Time.timeSinceLevelLoad < 5 || timeSinceLastObj < 1)
+						continue;
+					timeSinceLastObj = 0;
+				}
+
+				Instantiate (objects [random], spawnPoints [randomSpawnPointNum].position, Quaternion.identity);
 
 				Rigidbody2D thisRigidbody = objects [random].GetComponent<Rigidbody2D> ();
 				thisRigidbody.isKinematic = false;
 
 				thisRigidbody.AddTorque (Random.Range (-rotationSpeed, rotationSpeed));
-
-				objects.RemoveAt (random);
 			}
 			yield return new WaitForSeconds (spawnSeconds);
 		}
@@ -68,7 +71,7 @@ public class SpawnControl : MonoBehaviour
 		if (StaticVars.lives <= 0)
 			StopAllCoroutines ();
 
-		timeSinceLastLife += 1 * Time.deltaTime;
+		timeSinceLastObj += 1 * Time.deltaTime;
 	}
 
 	void AddToSpawnPointsList(Transform _spawnPoint)

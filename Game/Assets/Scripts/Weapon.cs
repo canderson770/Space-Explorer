@@ -14,20 +14,19 @@ public class Weapon : MonoBehaviour
 		rb.velocity = transform.up * bulletSpeed;
 	}
 
-	public void OnTriggerEnter2D(Collider2D coll)
+	public virtual void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (coll.gameObject.name == "ceiling")
 		{
-			print ("destroy");
 			DestroyObject (this.gameObject);
 		}
 
-		if (coll.gameObject.name == "meteor")
+		if (coll.gameObject.tag == "Meteor")
 		{
-			print ("hit");
 			Meteor meteor = coll.gameObject.GetComponent<Meteor> ();
 			meteor.meteorHealth -= damage;
 			meteor.CheckHealth ();
+			Destroy (this.gameObject);
 		}
 	}
 }
