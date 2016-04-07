@@ -10,6 +10,10 @@ public class SpawnControl : MonoBehaviour
 	public static float spawnSeconds = 1f;
 	float timeSinceLastObj = 0;
 
+	public float spawnIncreaseRate = .1f;
+	public int spawnIncreateTime = 60;
+	float previousTime = 0;
+
 	void Start()
 	{
 		spawnPoints = new List<Transform> ();
@@ -38,24 +42,27 @@ public class SpawnControl : MonoBehaviour
 				{
 					if (Time.timeSinceLevelLoad < 30 || timeSinceLastObj < 5 || StaticVars.lives == 3) 
 					{
-						continue;
+//						print ("skip life");
 						timeSinceLastObj = 0;
+						continue;
 					}
 				}
 				if (objects [random].name == "stopwatch")
 				{
 					if (Time.timeSinceLevelLoad < 45 || timeSinceLastObj < 20)
 					{
-						continue;
+//						print ("skip stopwatch");
 						timeSinceLastObj = 0;
+						continue;
 					}
 				}
 				if(objects[random].name == "coin")
 				{
-					if (Time.timeSinceLevelLoad < 5 || timeSinceLastObj < 1) 
+					if (Time.timeSinceLevelLoad < 5 || timeSinceLastObj < 2) 
 					{
-						continue;
+//						print ("skip coin");
 						timeSinceLastObj = 0;
+						continue;
 					}
 				}
 
@@ -73,6 +80,14 @@ public class SpawnControl : MonoBehaviour
 			StopAllCoroutines ();
 
 		timeSinceLastObj += 1 * Time.deltaTime;
+
+		if(spawnSeconds > spawnIncreaseRate)
+			if (Time.timeSinceLevelLoad - previousTime > spawnIncreateTime)
+			{
+				spawnSeconds -= spawnIncreaseRate;
+				previousTime = Time.timeSinceLevelLoad;
+				print (spawnSeconds);
+			}	
 	}
 
 	void AddToSpawnPointsList(Transform _spawnPoint)

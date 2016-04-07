@@ -1,21 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameOperation : MonoBehaviour
 {
 	public void Play()
 	{
-		Application.LoadLevel ("Level 1");
+		SceneManager.LoadScene ("Level 1");
 		StaticVars.Reset ();
 	}
 
 	public void MainMenu()
 	{
-		Application.LoadLevel ("MainMenu");
+		SceneManager.LoadScene ("MainMenu");
 	}
 
 	public void CloseGame()
 	{
-		Application.Quit();	
+		#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+		#endif
+
+		Application.Quit();
 	}
 }

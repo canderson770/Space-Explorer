@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: f81f4faa2aef2d04c992c45c7ef4e5bc
+timeCreated: 1460046870
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MeteorsGlow_0
+    21300002: MeteorsGlow_1
+    21300004: MeteorsGlow_2
+    21300006: MeteorsGlow_3
+    21300008: MeteorsGlow_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MeteorsGlow_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 129
+        width: 207
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.59375, y: 70.416016}
+        - {x: -68.59375, y: 44.416016}
+        - {x: -68.59375, y: -30.583984}
+        - {x: -54.59375, y: -68.583984}
+        - {x: 68.40625, y: -68.583984}
+        - {x: 70.40625, y: -58.583984}
+        - {x: 70.40625, y: 29.416016}
+        - {x: 41.40625, y: 70.416016}
+    - name: MeteorsGlow_1
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 48
+        width: 399
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 134.13477, y: -36.53125}
+        - {x: 134.13477, y: 58.46875}
+        - {x: 133.13477, y: 64.46875}
+        - {x: 75.134766, y: 122.46875}
+        - {x: 63.134766, y: 126.46875}
+        - {x: 43.134766, y: 134.46875}
+        - {x: -42.865234, y: 134.46875}
+        - {x: -63.865234, y: 122.46875}
+        - {x: -81.865234, y: 89.46875}
+        - {x: -80.865234, y: 52.46875}
+        - {x: -93.865234, y: 48.46875}
+        - {x: -132.86523, y: 8.46875}
+        - {x: -132.86523, y: -26.53125}
+        - {x: -131.86523, y: -30.53125}
+        - {x: -120.865234, y: -60.53125}
+        - {x: -50.865234, y: -130.53125}
+        - {x: -43.865234, y: -132.53125}
+        - {x: 42.134766, y: -132.53125}
+        - {x: 53.134766, y: -130.53125}
+        - {x: 85.134766, y: -108.53125}
+        - {x: 122.134766, y: -70.53125}
+    - name: MeteorsGlow_2
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 65
+        width: 333
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 111.759766, y: 50.791016}
+        - {x: 94.759766, y: 91.791016}
+        - {x: 57.759766, y: 117.791016}
+        - {x: 9.759766, y: 117.791016}
+        - {x: -18.240234, y: 107.791016}
+        - {x: -84.240234, y: 73.791016}
+        - {x: -111.240234, y: 47.791016}
+        - {x: -111.240234, y: -62.208984}
+        - {x: -89.240234, y: -99.208984}
+        - {x: -72.240234, y: -117.208984}
+        - {x: 13.759766, y: -117.208984}
+        - {x: 49.759766, y: -94.208984}
+        - {x: 64.759766, y: -32.208984}
+        - {x: 111.759766, y: 1.7910156}
+    - name: MeteorsGlow_3
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 33
+        width: 414
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 113.478516, y: -35.521484}
+        - {x: 139.47852, y: -7.5214844}
+        - {x: 139.47852, y: 128.47852}
+        - {x: 128.47852, y: 139.47852}
+        - {x: 111.478516, y: 145.47852}
+        - {x: 61.478516, y: 145.47852}
+        - {x: 25.478516, y: 138.47852}
+        - {x: -50.521484, y: 116.478516}
+        - {x: -85.521484, y: 101.478516}
+        - {x: -93.521484, y: 96.478516}
+        - {x: -118.521484, y: 45.478516}
+        - {x: -117.521484, y: -13.521484}
+        - {x: -127.521484, y: -26.521484}
+        - {x: -137.52148, y: -54.521484}
+        - {x: -137.52148, y: -95.521484}
+        - {x: -136.52148, y: -106.521484}
+        - {x: -102.521484, y: -138.52148}
+        - {x: -93.521484, y: -143.52148}
+        - {x: -5.5214844, y: -143.52148}
+        - {x: 31.478516, y: -124.521484}
+        - {x: 58.478516, y: -113.521484}
+        - {x: 102.478516, y: -67.521484}
+    - name: MeteorsGlow_4
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 65
+        width: 302
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.416016, y: 79.791016}
+        - {x: -49.583984, y: 79.791016}
+        - {x: -85.583984, y: 48.791016}
+        - {x: -100.583984, y: 30.791016}
+        - {x: -100.583984, y: -38.208984}
+        - {x: -81.583984, y: -79.208984}
+        - {x: 57.416016, y: -79.208984}
+        - {x: 77.416016, y: -75.208984}
+        - {x: 102.416016, y: -42.208984}
+        - {x: 102.416016, y: 42.791016}
+        - {x: 88.416016, y: 60.791016}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

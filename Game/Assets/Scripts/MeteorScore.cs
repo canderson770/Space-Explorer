@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MeteorScore : MeteorExplosion
+public class MeteorScore : WaitForDestroyScript
 {
 	GameObject child;
 	Text score;
@@ -10,23 +10,15 @@ public class MeteorScore : MeteorExplosion
 
 	void Start()
 	{
-//		Meteor.PassMeteorPoints += SetScore;
-
 		child = transform.Find ("Score").gameObject;
 		score = child.GetComponent<Text> ();
 		SetScore ();
-		StartCoroutine (WaitForDestroy ());
+		base.Start ();
 	}
 
 	void SetScore()
 	{
 		score.text = StaticVars.tempScore.ToString();
 		StaticVars.score += StaticVars.tempScore;
-	}
-
-	IEnumerator WaitForDestroy()
-	{
-		yield return new WaitForSeconds (2);
-		Destroy (this.gameObject);
 	}
 }

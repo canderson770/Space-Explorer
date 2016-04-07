@@ -19,8 +19,6 @@ public class playerController : MonoBehaviour
 	public float invincibility = 1;
 	public GameObject gameOver;
 
-	bool slowMotion = true;
-
 	void Start()
 	{
 		spriteRenderer = GetComponent<SpriteRenderer> ();

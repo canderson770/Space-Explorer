@@ -5,7 +5,7 @@ public class Gun : MonoBehaviour
 {
 	public float bulletSpeed = 30;
 	public float damage = 1;
-	public Rigidbody2D rb;
+	[HideInInspector] public Rigidbody2D rb;
 
 	public void Start() 
 	{

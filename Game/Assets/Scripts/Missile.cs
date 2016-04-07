@@ -3,21 +3,43 @@ using System.Collections;
 
 public class Missile : Gun
 {
-	public GameObject[] meteors;
-	GameObject closest;
+//	public GameObject[] meteors;
+//	GameObject closest;
 //	float closestDist = 1000000f;
+
+	public GameObject explosion;
+	Vector3 explosionOffset;
 
 	void Start()
 	{
-		//bulletSpeed = 20;
-		damage = 5;
+		damage = 5; 
+		explosionOffset = new Vector3(0,1.5f,0);
 		base.Start ();
 	}
 
-	void FixedUpdate()
+	public virtual void OnTriggerEnter2D(Collider2D coll)
 	{
-		rb.velocity = transform.up * bulletSpeed;
+		if (coll.gameObject.name == "ceiling")
+		{
+			DestroyObject (this.gameObject);
+		}
+
+		if (coll.gameObject.tag == "Meteor")
+		{
+			Meteor meteor = coll.gameObject.GetComponent<Meteor> ();
+			meteor.meteorHealth -= damage;
+			meteor.CheckHealth ();
+			Vector3 explosionPos = transform.position + explosionOffset;
+			Instantiate (explosion, explosionPos, Quaternion.identity);
+			Destroy (this.gameObject);
+		}
 	}
+
+
+
+
+
+
 
 	//FAILED ATTEMPT AT HEAT SEEKING MISSILE
 
