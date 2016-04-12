@@ -1,17 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIScripts\Pause.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerInput.cs">
     <Files>
-      <File FileName="Assets\Scripts\UIScripts\ShowPanels.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScripts\DontDestroy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScripts\Pause.cs" Line="49" Column="28" />
-      <File FileName="Assets\Scripts\UIScripts\PlayMusic.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScripts\SetAudioLevels.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScripts\StartOptions.cs" Line="111" Column="38" />
-      <File FileName="Assets\Scripts\GameOperation.cs" Line="27" Column="2" />
-      <File FileName="Assets\Scripts\Short Scripts\TimeControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Laser.cs" Line="6" Column="23" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="10" Column="17" />
+      <File FileName="Assets\Scripts\Missile.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\SpawnControl.cs" Line="49" Column="1" />
+      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Laser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WaitForDestroyScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShootScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SetAsSpawnPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScoreControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\playerInput.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

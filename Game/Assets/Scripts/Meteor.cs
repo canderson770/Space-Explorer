@@ -21,7 +21,6 @@ public class Meteor : MonoBehaviour
 		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 
-		rb.isKinematic = false;
 		rb.AddTorque (Random.Range (-rotationSpeed, rotationSpeed));
 	}
 
@@ -29,7 +28,7 @@ public class Meteor : MonoBehaviour
 	{
 		if (meteorHealth <= 0) 
 		{
-			AudioSource.PlayClipAtPoint (audio.clip, transform.position, 2);
+			AudioSource.PlayClipAtPoint (audio.clip, transform.position, 3);
 			Instantiate (particles, transform.position, Quaternion.identity);
 
 			StaticVars.tempScore = meteorPoints;

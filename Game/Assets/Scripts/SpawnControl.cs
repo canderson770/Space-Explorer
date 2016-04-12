@@ -17,14 +17,9 @@ public class SpawnControl : MonoBehaviour
 	void Start()
 	{
 		spawnPoints = new List<Transform> ();
-//		objects = new List<GameObject> ();
-
 		SetAsSpawnPoint.PassSpawnPointTransform += AddToSpawnPointsList;
-//		SetAsObject.PassObjectGameObject += AddToObjectsList;
-//		AddObjects.AddObjectsBack += AddToObjectsList;
 
 		StartCoroutine (Spawn ());
-
 	}
 
 	IEnumerator Spawn()
@@ -42,25 +37,24 @@ public class SpawnControl : MonoBehaviour
 				{
 					if (Time.timeSinceLevelLoad < 30 || timeSinceLastObj < 5 || StaticVars.lives == 3) 
 					{
-//						print ("skip life");
 						timeSinceLastObj = 0;
 						continue;
 					}
 				}
-				if (objects [random].name == "stopwatch")
-				{
-					if (Time.timeSinceLevelLoad < 45 || timeSinceLastObj < 20)
-					{
-//						print ("skip stopwatch");
-						timeSinceLastObj = 0;
-						continue;
-					}
-				}
+
+//				if (objects [random].name == "stopwatch")
+//				{
+//					if (Time.timeSinceLevelLoad < 45 || timeSinceLastObj < 20)
+//					{
+//						timeSinceLastObj = 0;
+//						continue;
+//					}
+//				}
+
 				if(objects[random].name == "coin")
 				{
 					if (Time.timeSinceLevelLoad < 5 || timeSinceLastObj < 2) 
 					{
-//						print ("skip coin");
 						timeSinceLastObj = 0;
 						continue;
 					}
