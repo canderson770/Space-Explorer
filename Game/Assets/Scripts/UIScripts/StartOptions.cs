@@ -108,7 +108,7 @@ public class StartOptions : MonoBehaviour {
 		animMenuAlpha.SetTrigger ("fade");
 		Invoke("HideDelayed", fadeAlphaAnimationClip.length);
 
-		Application.LoadLevel ("Level 1");
+		SceneManager.LoadScene ("Level 1");
 	}
 
 

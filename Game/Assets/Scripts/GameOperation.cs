@@ -24,3 +24,4 @@ public class GameOperation : MonoBehaviour
 		Application.Quit();
 	}
 }
+	

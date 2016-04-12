@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Laser :  Gun 
 {
-	void Start()
+	public override void Start()
 	{
 		bulletSpeed = 20;
 		base.Start();

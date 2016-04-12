@@ -38,7 +38,7 @@ public class Pause : MonoBehaviour {
 	public void DoPause()
 	{
 		isPaused = true;
-		Time.timeScale = 0;
+		StaticVars.paused = true;
 		showPanels.ShowPausePanel ();
 	}
 
@@ -46,7 +46,7 @@ public class Pause : MonoBehaviour {
 	public void UnPause()
 	{
 		isPaused = false;
-		Time.timeScale = 1;
+		StaticVars.paused = false;
 		showPanels.HidePausePanel ();
 	}
 

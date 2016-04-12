@@ -2,14 +2,16 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIScripts\Pause.cs">
     <Files>
+      <File FileName="Assets\Scripts\UIScripts\ShowPanels.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UIScripts\DontDestroy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScripts\Pause.cs" Line="29" Column="73" />
+      <File FileName="Assets\Scripts\UIScripts\Pause.cs" Line="49" Column="28" />
       <File FileName="Assets\Scripts\UIScripts\PlayMusic.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UIScripts\SetAudioLevels.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScripts\ShowPanels.cs" Line="10" Column="2" />
-      <File FileName="Assets\Scripts\UIScripts\StartOptions.cs" Line="23" Column="25" />
-      <File FileName="Assets\Scripts\GameOperation.cs" Line="20" Column="19" />
+      <File FileName="Assets\Scripts\UIScripts\StartOptions.cs" Line="111" Column="38" />
+      <File FileName="Assets\Scripts\GameOperation.cs" Line="27" Column="2" />
       <File FileName="Assets\Scripts\Short Scripts\TimeControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Laser.cs" Line="6" Column="23" />
+      <File FileName="Assets\Scripts\Gun.cs" Line="10" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

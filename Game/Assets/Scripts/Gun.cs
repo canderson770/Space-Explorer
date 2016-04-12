@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
 	public float damage = 1;
 	[HideInInspector] public Rigidbody2D rb;
 
-	public void Start() 
+	public virtual void Start() 
 	{
 		rb = GetComponent<Rigidbody2D> ();
 
